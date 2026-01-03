@@ -1,0 +1,37 @@
+﻿@{
+    TempData["Title"] = "Registeration";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Registeration</h1>
+</div>
+
+
+<div>
+    <form asp-controller="Home" asp-action="RegisterUser" method="post">
+        @* username *@
+        <div class="mb-3">
+            <label for="username" class="form-label">UserName</label>
+            <input type="text" name="username" class="form-control" id="username" placeholder="Enter your username" />
+        </div>
+        @*emial*@
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="Enter your Email" />
+        </div>
+        @*password*@
+        <div class="mb-3">
+            <label for="password" class="form-label" id="password">Password</label>
+            <input type="password" name="password" class="form-control" id="" placeholder="Enter your Password" />
+        </div>
+        @*confirm password*@
+        <div class="mb-3">
+            <label for="confirmPassword" class="form-label" id="confirmPassword"> ConformPassword</label>
+            <input type="password" name="confirmPassword" class="form-control" id="" placeholder="Conform your Password" />
+        </div>
+        @*button*@
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+    </form>
+</div>

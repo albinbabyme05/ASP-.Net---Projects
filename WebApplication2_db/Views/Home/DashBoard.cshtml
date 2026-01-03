@@ -1,0 +1,59 @@
+﻿@model List<WebApplication2_db.Models.Products>
+
+@{
+    ViewData["Title"] = "Product DashBoard";
+}
+<div>
+    <h4>Welcome to Admin Product DashBoard</h4>
+</div>
+
+<a asp-controller="Product" asp-action="AddProducts" class="btn btn-success">Add a Product</a>
+
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Color</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                if (Model == null || !Model.Any())
+                {
+                    <tr>
+                        <td colspan="6" class="text-center">No Products Available</td>
+                    </tr> 
+                }
+                else
+                {
+                    @foreach (var product in Model)
+                    {
+                        <tr>
+                            <td>@product.ProductId</td>
+                            <td>@product.ProductName</td>
+                            <td>@product.Description</td>
+                            <td>€ @product.Price</td>
+                            <td>@product.Color</td>
+                            <td><a asp-controller="Product" asp-action="DeleteAProduct" asp-route-productid="@product.ProductId" class=" btn btn-danger">Delete</a></td>
+                            <td><a asp-controller="Product" asp-action="UpdateProduct" asp-route-productid="@product.ProductId" class=" btn btn-primary">Update</a></td>
+                        </tr>
+                    }
+                }
+            }
+           
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+

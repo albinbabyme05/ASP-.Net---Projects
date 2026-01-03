@@ -1,0 +1,62 @@
+﻿@model List<SchoolManagement.Models.Students>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4">ABC Public School Ludwigsburg</h1>
+</div>
+
+
+<div class="searchTool">
+    @*btn: add a student*@
+    <a asp-controller="Student" asp-action="AddStudentToDB" class="btn btn-success">Add Student</a>
+
+    @*div: Search tool*@
+    <form class="searchToolRight" asp-controller="Student" asp-action="SearchAStudent" method="post">
+        <input type="text" name="searchAStudentName" id="searchAStudentName" placeholder="Search a student" />
+        <button type="submit" class="btn btn-primary">🔍</button>
+    </form>
+</div>
+
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>StudentId</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                if(Model == null || !Model.Any())
+                {
+                    <tr>
+                        <td colspan="7" class="text-center">No Student Avialable</td>
+                    </tr>
+                }
+                else
+                {
+                    @foreach(var student in Model)
+                    {
+                        <tr>
+                            <td>@student.StudentId</td>
+                            <td>@student.Name</td>
+                            <td>@student.Age</td>
+                            <td>@student.Email</td>
+                            <td>@student.Department</td>
+                            <td><a asp-controller="Student" asp-action="DeleteAStudent" asp-route-delStudentId="@student.StudentId" class=" btn btn-danger">Delete</a></td>
+                            <td><a asp-controller="Student" asp-action="UpdateAStudent" asp-route-updateStudentId="@student.StudentId" class=" btn btn-primary">Update</a></td>
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+    </table>
+</div>

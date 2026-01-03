@@ -1,0 +1,116 @@
+############################################
+# Visual Studio / ASP.NET MVC
+############################################
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+[Bb]uild/
+[Bb]uild[Ll]og.*
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+############################################
+# Visual Studio cache
+############################################
+.vs/
+.vscode/
+
+############################################
+# NuGet
+############################################
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+.nuget/packages/
+
+############################################
+# Logs
+############################################
+*.log
+
+############################################
+# OS generated files
+############################################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+############################################
+# Publish output
+############################################
+publish/
+wwwroot/lib/
+
+############################################
+# Environment / Secrets
+############################################
+appsettings.Development.json
+appsettings.Production.json
+secrets.json
+
+############################################
+# Database files (LocalDB / SQLite)
+############################################
+*.mdf
+*.ldf
+*.db
+*.db-shm
+*.db-wal
+
+############################################
+# Rider / JetBrains
+############################################
+.idea/
+*.sln.iml
+
+############################################
+# Backup files
+############################################
+*.bak
+*.tmp
+*.old
+.vs/
+**/bin/
+**/obj/
+**/*.csproj.user
+**/appsettings.Development.json
+**/wwwroot/lib/
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+**/*.csproj.user
+
+# Build output
+**/bin/
+**/obj/
+
+# Logs
+*.log
+
+# ASP.NET Core secrets / local config
+**/appsettings.Development.json
+secrets.json
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Optional: client libraries (LibMan)
+**/wwwroot/lib/

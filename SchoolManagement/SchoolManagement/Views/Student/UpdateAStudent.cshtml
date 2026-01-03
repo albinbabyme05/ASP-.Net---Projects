@@ -1,0 +1,45 @@
+﻿@model SchoolManagement.Models.Students
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="text-center">
+    <h3>Updation</h3>
+</div>
+
+
+<div>
+    <form asp-controller="Student" asp-action="UpdateStudentDB" method="post">
+
+        <input type="hidden" name="updStudentId" value="@Model.StudentId" />
+        @*name*@
+        <div class="mb-2">
+            <label for="sstudentName" class="form-label">Student Name</label>
+            <input type="text" name="studentName" id="studentName" value="@Model.Name" class="form-control" placeholder="Enter student Name " />
+        </div>
+
+        @*age*@
+        <div class="mb-2">
+            <label for="studentAge" class="form-label">Age</label>
+            <input type="number" name="studentAge" id="studentAge" value="@Model.Age" class="form-control" placeholder="Enter student Age " />
+        </div>
+
+        @*Email*@
+        <div class="mb-2">
+            <label for="studentEmail" class="form-label">Email Adress</label>
+            <input type="text" name="studentEmail" id="studentEmail" value="@Model.Email" class="form-control" placeholder="Enter student Email " />
+        </div>
+
+        @*Department*@
+        <div class="mb-2">
+            <label for="department" class="form-label">Department</label>
+            <input type="text" name="department" id="department" value="@Model.Department" class="form-control" placeholder="Enter the Department " />
+        </div>
+
+        @*Button*@
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+
+    </form>
+</div>

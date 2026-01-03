@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Register Student";
+}
+<div class="text-center">
+    <h3>Registeration</h3>
+</div>
+
+
+<div>
+    <form asp-controller="Student" asp-action="RegisterAStudent" method="post">
+
+    @*name*@
+    <div class="mb-2">
+        <label for="sstudentName" class="form-label">Student Name</label>
+         <input type="text" name="studentName" id="studentName" class="form-control" placeholder="Enter student Name " />
+    </div>
+
+    @*age*@
+        <div class="mb-2">
+        <label for="studentAge" class="form-label">Age</label>
+        <input type="number" name="studentAge" id="studentAge" class="form-control"  placeholder="Enter student Age " />
+    </div>
+
+    @*Email*@
+        <div class="mb-2">
+        <label for="studentEmail" class="form-label">Email Adress</label>
+        <input type="text" name="studentEmail" id="studentEmail" class="form-control"  placeholder="Enter student Email " />
+    </div>
+
+    @*Department*@
+        <div class="mb-2">
+        <label for="department" class="form-label">Department</label>
+        <input type="text" name="department" id="department" class="form-control"  placeholder="Enter the Department " />
+    </div>
+
+    @*Button*@
+        <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+
+    </form >
+</div>

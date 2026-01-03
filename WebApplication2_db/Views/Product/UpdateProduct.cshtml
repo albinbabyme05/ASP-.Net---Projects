@@ -1,0 +1,49 @@
+﻿@model WebApplication2_db.Models.Products
+
+@{
+    ViewData["Title"] = "Update Product";
+}
+
+<div>
+    <h2 class="display-4">Update Product</h2>
+</div>
+
+<div>
+    <form asp-controller="Product" asp-action="UpdateProductItem" method="post">
+
+        @* productId *@
+        <div class="mb-3">
+            <input type="hidden" name="productId" value="@Model.ProductId" />
+        </div>
+
+        @*email*@
+        <div class="mb-3">
+            <label for="productName" class="form-label">Product Name</label>
+            <input type="text" name="productName" value="@Model.ProductName" class="form-control" id="productName" placeholder="Enter your productName" />
+        </div>
+
+        @*Description*@
+        <div class="mb-3">
+            <label for="Description" class="form-label" id="Description">Description</label>
+            <input type="text" name="description" value="@Model.Description" class="form-control" id="" placeholder="Enter your product description" />
+        </div>
+
+        @*Price*@
+        <div class="mb-3">
+            <label for="price" class="form-label" id="price">Price</label>
+            <input type="text" name="price" value="@Model.Price" class="form-control" id="" placeholder="Enter your product price" />
+        </div>
+
+        @*Color*@
+        <div class="mb-3">
+            <label for="color" class="form-label" id="color">Color</label>
+            <input type="text" name="color" value="@Model.Color" class="form-control" id="" placeholder="Enter your product color" />
+        </div>
+
+        @*button*@
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    </form>
+</div>
+
