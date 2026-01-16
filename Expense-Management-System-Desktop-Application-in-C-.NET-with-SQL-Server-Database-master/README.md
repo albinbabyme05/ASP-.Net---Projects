@@ -39,19 +39,13 @@ The **Expense Management System** is a desktop application built using **C#.NET*
 
 
 * Dashboard
-  ![3Dashboard](https://github.com/user-attachments/assets/f72b1283-b03a-4681-93ef-15ee5e5f4317)
+  <img width="4400" height="2349" alt="Picture1" src="https://github.com/user-attachments/assets/1a8a7a70-d531-4122-aeb1-d7a49ac19e4a" />
 
 * Category
-![4category](https://github.com/user-attachments/assets/48efbfe5-0e96-49a6-ae9e-286376ef370e)
+<img width="4400" height="2355" alt="Picture2" src="https://github.com/user-attachments/assets/e9b50f31-85a1-411e-824f-0060687fb840" />
 
-  
 * Income
-
-  ![5income](https://github.com/user-attachments/assets/a8bae480-5f95-4d50-b494-9a1b64ed9eb9)
-
-
-* Expense
-![6expense](https://github.com/user-attachments/assets/f7ed847c-e3bd-4c24-a1a9-932583453ede)
+<img width="4400" height="2363" alt="Picture3" src="https://github.com/user-attachments/assets/d6281a4b-946a-4dc7-81bc-35d49177a75e" />
 
   
 ---
